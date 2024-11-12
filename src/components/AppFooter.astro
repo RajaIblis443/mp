@@ -1,9 +1,13 @@
 ---
-import Colab from "./Colab.astro";
+
 import Container from "./Container.astro";
 
 
 ---
+
+<style>
+  .custom-bullet li::marker { color: rgb(244 63 94);}
+</style>
 
 <footer class="py-20 md:py-40 " id="footer">
     <Container/>
@@ -12,7 +16,7 @@ import Container from "./Container.astro";
           <div
             class="flex w-full justify-center space-x-12 text-gray-600 dark:text-gray-300 sm:w-7/12 md:justify-start"
           >
-            <ul class="list-inside list-disc space-y-8">
+            <ul class="list-inside list-disc space-y-8 custom-bullet">
               <li><a href="#home" class="transition hover:text-primary">Home</a></li>
   
               <li><a href="#features" class="transition hover:text-primary">Features</a></li>
@@ -85,8 +89,4 @@ import Container from "./Container.astro";
         </div>
       </div>
     </Container>
-    <div class="mt-10 border-t border-gray-200 dark:border-gray-700">
-
-    </div>
-    <Colab/>
 </footer>

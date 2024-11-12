@@ -121,6 +121,7 @@ module.exports = {
     },
     animation: {
       none: 'none',
+      'pause': 'animation-play-state: paused',
       spin: 'spin 1s linear infinite',
       ping: 'ping 1s cubic-bezier(0, 0, 0.2, 1) infinite',
       pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
@@ -567,6 +568,14 @@ module.exports = {
       full: '100%',
     }),
     keyframes: {
+      marquee: {
+        '0%': { transform: 'translateX(0%)' },
+        '100%': { transform: 'translateX(-100%)' },
+      },
+      scroll: {
+        '0%': { transform: 'translateX(0)' },
+        '100%': { transform: 'translateX(-50%)' },
+      },
       spin: {
         to: {
           transform: 'rotate(360deg)',
